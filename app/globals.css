@@ -1,0 +1,44 @@
+/* Контейнер навигации */
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1rem 1.5rem;
+  background-color: #0f172a; /* Тёмный фон (slate-900) */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* Ссылки внутри навигации */
+.nav-link {
+  color: #94a3b8; /* Светло-серый цвет */
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  position: relative;
+  padding: 0.25rem 0;
+  transition: color 0.2s ease;
+}
+
+/* Эффект при наведении */
+.nav-link:hover {
+  color: #ffffff;
+}
+
+/* Анимированная полоска снизу */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #38bdf8; /* Голубой акцент */
+  transition: width 0.25s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
